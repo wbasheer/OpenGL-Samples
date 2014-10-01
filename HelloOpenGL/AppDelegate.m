@@ -17,6 +17,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    CGRect screenBounds = [[UIScreen mainScreen] bounds];
+    self.glView = [[OpenGLView alloc] initWithFrame:screenBounds];
+    [self.window addSubview:_glView];
+    
     return YES;
 }
 
